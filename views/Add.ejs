@@ -1,0 +1,37 @@
+<%- include('./layout/Header') %>
+<%- include('./layout/Navbar') %>
+
+<div class="add-to-diary">
+    <h1>ADD <span class="green-text">DIARY</span></h1>
+
+     <!--imethod = post-->
+    <form action="/add-to-diary" method="post">
+
+        <!--id== itle-->
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" name="title" id="title" >
+        </div>
+
+        <!--id= description-->
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea name="description" id="description" cols="30" rows="5" ></textarea>
+        </div>
+
+         <!--id= date-->
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" class="form-control" name="date" id="date">
+        </div>
+
+        <input type="submit" value="Add To Diary">
+
+    </div>
+
+    </form>
+
+
+</div>
+
+<%- include('./layout/Footer') %>

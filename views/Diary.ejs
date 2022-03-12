@@ -1,0 +1,24 @@
+<%- include('./layout/Header') %>
+<%- include('./layout/Navbar') %>
+        
+<div class="add-container">
+    <div class="add">
+        <p>Add To Diary</p>
+        <a href="/add">ADD</a>
+    </div>  
+
+    <div class ="diary">
+
+        <% data.forEach((diary) => {%>
+            <div class="diary-container">
+                <h3><%= diary.title %></h3>
+                <p><%= diary.date %></p>
+                <p>ID: <%= diary.id %></p>
+                <a href="/diary/<%= diary.id %>">More</a>
+            </div>
+        <%}) %>
+    </div>
+
+</div>
+
+<%- include('./layout/Footer') %>

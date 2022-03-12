@@ -1,0 +1,49 @@
+<%- include('./layout/Header') %>
+<%- include('./layout/Navbar') %>
+
+<div class="add-to-diary">
+    <h1>EDIT <span class="green-text">DIARY</span></h1>
+
+     <!--method = post-->
+    <form action= "/diary/edit/<%= data.id %>?_method=PUT" method="post">
+
+    <input type="hidden" name="_method" value="PUT">
+
+        <div>
+            <p>MongoDB Object ID: <%= data.id %></p>
+            <br>
+        </div>
+
+        <!--id== itle-->
+
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" name="title" id="title" value="<%= data.title %>" >
+        </div>
+
+        <!--id= description-->
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea name="description" id="description" cols="30" rows="5" 
+            ><%= data.description %></textarea>
+        </div>
+
+         <!--id= date-->
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" class="form-control" name="date" id="date">
+        </div>
+
+        <input type="submit" value="Edit To Diary">
+
+    </div>
+
+    </form>
+
+
+</div>
+
+
+
+
+<%- include('./layout/Footer') %>
